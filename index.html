@@ -11,7 +11,33 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <p>Hello World!!!</p>
+    
+    <header>
+      <h1><span>Lets</span> Minify!!!</h1>
+      <p>Paste your URL below and click the button</p>
+    </header>
+
+    <section>
+      <div class="container">
+        <form action="">
+          <input type="text" id="link" placeholder="https://example.com">
+          <button id="btn">TEST POPUP</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 <a href="#">Rishil & Co.</a></p>
+    </footer>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Your download will begin in...</p>
+        <progress value="0" max="10" id="pbar" class="progress"></progress>
+        <p id="counting">10</p>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>

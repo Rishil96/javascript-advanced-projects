@@ -48,3 +48,11 @@ function erase() {
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(type, newWordDelay);
 })
+
+
+// Preloader JS
+const preloader = document.querySelector(".preloader");
+
+window.addEventListener("load", () => {
+    preloader.style.display = "none";
+})

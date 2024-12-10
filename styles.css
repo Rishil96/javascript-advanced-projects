@@ -125,3 +125,42 @@ span {
 .intro-img img {
   width: 70%;
 }
+
+/* preloader css */
+.preloader {
+  height: 100%;
+  width: 100%;
+  background-color: var(--grey);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.spinner {
+  width: 6rem;
+  height: 6rem;
+  border: 3px solid var(--white);
+  border-top: 3px solid var(--color-sec);
+  border-right: 3px solid var(--color-sec);
+  border-bottom: 3px solid var(--color-sec);
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  
+  animation: rotate 1s infinite ease-in-out;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.youtube {
+  display: flex;
+  justify-content: center;
+}

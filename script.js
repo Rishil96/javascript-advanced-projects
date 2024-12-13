@@ -21,3 +21,14 @@ const updateLimit = () => {
 }
 
 updateLimit();
+
+// Tweet function
+btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    tweet();
+})
+
+const tweet = () => {
+    const tweetInput = "https://twitter.com/intent/tweet?text=";
+    window.open(`${tweetInput}${input.value}`);
+};

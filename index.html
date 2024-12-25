@@ -9,9 +9,42 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
   </head>
   <body>
-    <p>Hello World!!!</p>
+    
+    <header>
+      <div class="meal-search container">
+        <h2>What would you <span>like to cook?</span></h2>
+        <div class="search-box">
+          <form action="" onsubmit="return false">
+            <input type="text" id="search" placeholder="Search...">
+            <button type="submit" class="btn search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <section class="container">
+      <div class="meal-result">
+        <div class="meals" id="meal">
+          <!-- Single Meal Item Start -->
+          <div class="meal-item meal">
+            <div class="meal-img">
+              <img src="./images/food.jpg" alt="">
+            </div>
+            <div class="meal-name">
+              <h3>Potato Chips</h3>
+              <a href="#" class="recipe-btn">View Recipe &rarr;</a>
+            </div>
+          </div>
+          <!-- Single Meal Item End -->
+        </div>
+      </div>
+    </section>
 
     <script src="script.js"></script>
   </body>

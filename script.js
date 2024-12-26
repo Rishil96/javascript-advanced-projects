@@ -9,6 +9,10 @@ const searchURL = "https://www.themealdb.com/api/json/v1/1/filter.php?i=";
 const lookupURL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
 
 form.addEventListener("submit", getMeals);
+mealList.addEventListener("click", getMealRecipe);
+closeBtn.addEventListener("click", () => {
+    mealModal.style.display = "none";
+})
 
 async function getMeals() {
     let searchInputVal = searchInput.value.trim();
@@ -43,3 +47,34 @@ function displayMeals(meals) {
     mealList.innerHTML = html;
 }
 
+
+// Get Recipe
+async function getMealRecipe(e) {
+    if (e.target.classList.contains("recipe-btn")) {
+        let mealItem = e.target.parentElement.parentElement;
+        const res = await fetch(`${lookupURL}${mealItem.dataset.id}`);
+        const data = await res.json();
+
+        displayRecipe(data.meals);
+    }
+}
+
+// Display recipe
+function displayRecipe(meal) {
+    meal = meal[0];
+    let html = `
+        <div class="recipe-img">
+            <img src="${meal.strMealThumb}" alt="">
+        </div>
+        <h2 class="recipe-title">${meal.strMeal}</h2>
+        <div class="recipe-instruction">
+            <h3>Instruction</h3>
+            <p>${meal.strInstructions}</p>
+        </div>
+        <div class="recipe-link">
+            <a href="${meal.strYoutube}" target="_blank">Watch Video</a>
+        </div>
+    `;
+    recipe.innerHTML = html;
+    mealModal.style.display = "block"; 
+}

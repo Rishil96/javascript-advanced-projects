@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Image Gallery Filter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <script
       src="https://kit.fontawesome.com/1935d064dd.js"
       crossorigin="anonymous"
@@ -11,7 +13,45 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <p>Hello World!!!</p>
+    
+    <section class="main">
+      <div class="container">
+        
+        <!-- Header -->
+        <div class="header">
+          <h1>Image <span>Gallery</span></h1>
+          <div class="gallery-filter">
+            <span class="filter-gallery active" data-filter="all">All</span>
+            <span class="filter-gallery" data-filter="shoe">Shoes</span>
+            <span class="filter-gallery" data-filter="bag">Bags</span>
+            <span class="filter-gallery" data-filter="headphone">Headphones</span>
+          </div>
+        </div>
+        
+        <!-- Gallery -->
+         <div class="gallery">
+          <div class="image shoe">
+            <img src="./images/shoe.jpg" alt="">
+          </div>
+          <div class="image shoe">
+            <img src="./images/shoe2.jpg" alt="">
+          </div>
+          <div class="image bag">
+            <img src="./images/bag.jpg" alt="">
+          </div>
+          <div class="image bag">
+            <img src="./images/bag2.jpg" alt="">
+          </div>
+          <div class="image headphone">
+            <img src="./images/headphone.jpg" alt="">
+          </div>
+          <div class="image headphone">
+            <img src="./images/headphone2.jpg" alt="">
+          </div>
+         </div>
+
+      </div>
+    </section>
 
     <script src="script.js"></script>
   </body>
